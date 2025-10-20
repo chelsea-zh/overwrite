@@ -9,12 +9,14 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		if Global.currentLadders.size() > 0:
+			velocity *= 0.8
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor() and !Global.on_ladder:
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	
-	if Input.is_action_pressed("jump") and Global.on_ladder:
+	if Input.is_action_pressed("jump") and (Global.currentLadders.size() > 0):
 		velocity.y = -SPEED
 
 	# Get the input direction and handle the movement/deceleration.

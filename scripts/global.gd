@@ -1,7 +1,6 @@
 extends Node
 
-var on_ladder: bool = false
-var next_ladder: bool = false
+var currentLadders = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

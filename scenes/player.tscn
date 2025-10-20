@@ -29,5 +29,6 @@ sprite_frames = SubResource("SpriteFrames_g2els")
 shape = SubResource("CapsuleShape2D_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -16)
 zoom = Vector2(6, 6)
 position_smoothing_enabled = true
