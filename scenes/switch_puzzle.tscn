@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxdbq4skbw5g8"]
+
+[ext_resource type="Script" uid="uid://l511gfm0340u" path="res://scripts/switch_puzzle.gd" id="1_71q8f"]
+
+[node name="switch_puzzle" type="Node2D"]
+script = ExtResource("1_71q8f")

@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwreg0jlj6abb"]
+
+[ext_resource type="Script" uid="uid://dyv5mya7v6i7q" path="res://scripts/switch.gd" id="1_1i7pn"]
+[ext_resource type="Texture2D" uid="uid://yomedlkey84i" path="res://assets/TESTswitchOn.png" id="2_e08h5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1i7pn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e08h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e08h5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnoiq"]
+size = Vector2(16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e08h5"]
+radius = 32.0
+
+[node name="switch" type="Node2D"]
+position = Vector2(0, 8)
+script = ExtResource("1_1i7pn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1i7pn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_nnoiq")
+
+[node name="range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="range"]
+shape = SubResource("CircleShape2D_e08h5")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="body_entered" from="range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="range" to="." method="_on_range_body_exited"]
