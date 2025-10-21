@@ -1,6 +1,7 @@
 class_name Door extends StaticBody2D
 
 @export var unlocked: bool = false
+#default unlocked, when puzzle solved is locked
 @export var reverse: bool = false
 
 # Called when the node enters the scene tree for the first time.

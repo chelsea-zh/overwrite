@@ -1,0 +1,15 @@
+overwrite TODO
+
+dialogue viewer-> for each character you have a list of their dialogues which you can read through again
+
+status viewer? -> see illustration of character + identifying details
+- prompt at beginning of game -> lost memories, taking stock of what you know
+- serial number or smth -> used as binary / code for a puzzle?
+	-> from memory implant thing prob
+- maybe what went wrong was the wrong number was used
+
+addon input helper by nathanhoad ->
+- rebindable keybinds
+- unbind player movement when in ui
+
+lock combination puzzle

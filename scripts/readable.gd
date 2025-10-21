@@ -2,10 +2,12 @@ class_name Readable extends Node2D
 
 var inRange: bool = false
 
+@export_multiline var description : String
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$CanvasLayer.visible = false
-	$CanvasLayer/description.text += "\n\npress space to close"
+	$CanvasLayer/description.text = description + "\n\npress space to close"
 	pass # Replace with function body.
 
 

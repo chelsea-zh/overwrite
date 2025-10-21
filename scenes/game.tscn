@@ -57,11 +57,17 @@ position = Vector2(-120, 0)
 startingState = true
 
 [node name="door2" parent="map/switch_puzzle" instance=ExtResource("7_gee14")]
-position = Vector2(-192, 8)
+position = Vector2(-56, -55)
+rotation = 1.57079
 reverse = true
 
 [node name="readable" parent="map/switch_puzzle" instance=ExtResource("8_0tnpc")]
 position = Vector2(104, 0)
+description = "uhhh hello :3"
+
+[node name="readable" parent="map" instance=ExtResource("8_0tnpc")]
+position = Vector2(223, -79)
+description = "go read the one in the locked room"
 
 [node name="player" parent="." instance=ExtResource("1_yqjtg")]
 position = Vector2(8, 0)
